@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color:lightblue
+}
+
+h1{
+    color:pink
+}
+
+<title>Online Bodmas Calculator With Golang </title>
+</style>
+</head>
+<body>
+
+<h1>iT'S A BODMAS CALCULATOR!!</h1>
+
+<div>
+  
+   <form action="/processbodmas" method="post">
+   <div>
+       <label for="equation">Enter your equation</label>
+       <input type="text" name="equation" id="equation" /> 
+   </div>
+ 
+
+   {{if .ResultOfEquation}}
+   <div>
+     <p>The answer to {{.Equation}} is <strong>{{ .ResultOfEquation }}</strong></p>
+   </div>
+   {{end}}
+
+   <div>
+   
+  <button type="submit">Submit</button> 
+   </div>
+   </form>
+</div>
+</body>
+</html>
